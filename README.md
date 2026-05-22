@@ -1,6 +1,6 @@
 # Example Quiz Funnel — Retirement Readiness Quiz
 
-A 12-step retirement readiness quiz funnel demo. White colorscheme with bronze (`#a38456`) and charcoal (`#3a3938`) accents, built for an older audience.
+A 12-step retirement readiness quiz funnel demo. White colorscheme with blue (`#2563eb`) and charcoal (`#1f2937`) accents, built for an older audience.
 
 **Flow:**
 1. **`/`**: 12-question quiz (9 retirement questions + first name + email + phone, each on its own step).

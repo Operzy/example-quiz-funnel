@@ -1,35 +1,35 @@
 :root {
-  /* Logo-derived palette
-     Bronze (--gold-*) is the primary accent — buttons, fills, highlights.
+  /* White + Blue palette
+     Blue (--gold-*) is the primary accent — buttons, fills, highlights.
      Charcoal (--navy-*) is supporting — text, secondary accents.
-     Variable names preserved so existing class names continue to map cleanly. */
-  --navy-50: #f6f5f3;
-  --navy-100: #ece9e3;
-  --navy-200: #d4d0c9;
-  --navy-400: #6e6c69;
-  --navy-500: #545250;
-  --navy-600: #424140;
-  --navy-700: #3a3938;  /* charcoal from logo */
-  --navy-900: #232221;
+     Variable names preserved (--gold-*) so existing class names continue to map cleanly. */
+  --navy-50: #f6f7f9;
+  --navy-100: #e8eaed;
+  --navy-200: #cfd3d9;
+  --navy-400: #6b7280;
+  --navy-500: #4b5563;
+  --navy-600: #374151;
+  --navy-700: #1f2937;  /* deep charcoal text */
+  --navy-900: #111827;
 
-  /* Bronze accent (warm metallic from logo) */
-  --gold-50:  #fbf7ee;
-  --gold-100: #f5eedf;
-  --gold-200: #ecdcb8;
-  --gold-300: #d8be8f;
-  --gold-400: #c9a774;
-  --gold-500: #a38456;  /* logo bronze, primary accent */
-  --gold-600: #856a40;
-  --gold-700: #6b5333;
+  /* Blue accent (replaces bronze) */
+  --gold-50:  #eff5ff;
+  --gold-100: #dbe7fe;
+  --gold-200: #bfd3fc;
+  --gold-300: #93b4f7;
+  --gold-400: #5d8af0;
+  --gold-500: #2563eb;  /* primary blue */
+  --gold-600: #1d4ed8;
+  --gold-700: #1e40af;
 
-  --ink: #1f1e1d;
-  --ink-soft: #4a4845;
-  --ink-muted: #807d78;
-  --line: #ece8e0;
+  --ink: #111827;
+  --ink-soft: #374151;
+  --ink-muted: #6b7280;
+  --line: #e5e7eb;
   --white: #ffffff;
   --bg: #ffffff;
-  --shadow: 0 10px 30px rgba(58, 57, 56, 0.06);
-  --shadow-soft: 0 4px 14px rgba(58, 57, 56, 0.05);
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --shadow-soft: 0 4px 14px rgba(15, 23, 42, 0.05);
   --radius: 18px;
 }
 
@@ -324,7 +324,7 @@ select {
 .btn-primary {
   background: var(--gold-500);
   color: var(--white);
-  box-shadow: 0 8px 18px rgba(163, 132, 86, 0.30);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
 }
 
 .btn-primary:hover {
@@ -546,7 +546,7 @@ select {
   font-weight: 700;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(163, 132, 86, 0.35);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.32);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -765,7 +765,7 @@ select {
 }
 
 .skeleton {
-  background: linear-gradient(90deg, var(--gold-50) 0%, #fbf9f3 50%, var(--gold-50) 100%);
+  background: linear-gradient(90deg, var(--gold-50) 0%, #f7faff 50%, var(--gold-50) 100%);
   background-size: 200% 100%;
   animation: shimmer 1.2s linear infinite;
   border-radius: 8px;
@@ -931,14 +931,14 @@ select {
   border-radius: 50%;
   background: var(--gold-500);
   border: 3px solid var(--white);
-  box-shadow: 0 2px 8px rgba(163, 132, 86, 0.35);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.32);
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .slider::-webkit-slider-thumb:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(163, 132, 86, 0.45);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.42);
 }
 
 .slider::-webkit-slider-thumb:active {
@@ -951,7 +951,7 @@ select {
   border-radius: 50%;
   background: var(--gold-500);
   border: 3px solid var(--white);
-  box-shadow: 0 2px 8px rgba(163, 132, 86, 0.35);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.32);
   cursor: pointer;
 }
 
@@ -1026,7 +1026,7 @@ select {
 }
 
 @keyframes valueFlash {
-  0%   { background: rgba(201, 167, 116, 0.55); border-radius: 6px; padding: 2px 6px; margin: -2px -6px; }
+  0%   { background: rgba(147, 180, 247, 0.55); border-radius: 6px; padding: 2px 6px; margin: -2px -6px; }
   100% { background: transparent; padding: 0; margin: 0; }
 }
 
