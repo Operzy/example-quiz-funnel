@@ -12,15 +12,15 @@
   --navy-700: #1f2937;  /* deep charcoal text */
   --navy-900: #111827;
 
-  /* Blue accent (replaces bronze) */
-  --gold-50:  #eff5ff;
-  --gold-100: #dbe7fe;
-  --gold-200: #bfd3fc;
-  --gold-300: #93b4f7;
-  --gold-400: #5d8af0;
-  --gold-500: #2563eb;  /* primary blue */
-  --gold-600: #1d4ed8;
-  --gold-700: #1e40af;
+  /* SRI slate-blue accent (sampled from the logo background) */
+  --gold-50:  #eef3f8;
+  --gold-100: #d8e3ed;
+  --gold-200: #b3c5d6;
+  --gold-300: #87a3bd;
+  --gold-400: #5e809e;
+  --gold-500: #3a5c7a;  /* primary slate blue, matches logo background */
+  --gold-600: #2c4762;
+  --gold-700: #1f3346;
 
   --ink: #111827;
   --ink-soft: #374151;
@@ -28,6 +28,10 @@
   --line: #e5e7eb;
   --white: #ffffff;
   --bg: #ffffff;
+  /* Header bar background — light gray so logos that contain white don't
+     blend into the page. Per-business CSS can override this with a darker
+     or warmer tint when the logo's own palette calls for it. */
+  --header-bg: #e5e7eb;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   --shadow-soft: 0 4px 14px rgba(15, 23, 42, 0.05);
   --radius: 18px;
@@ -69,35 +73,24 @@ select {
 
 .site-header {
   width: 100%;
-  background: var(--white);
-  padding: 18px 24px;
+  background: var(--header-bg);
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   border-bottom: 1px solid var(--line);
 }
 
-.site-header-mark {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  background: var(--gold-500);
-  box-shadow: 0 0 0 4px var(--gold-100);
-  display: inline-block;
-}
-
-.site-header-name {
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.4px;
-  color: var(--navy-700);
-  text-transform: uppercase;
+.site-header-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 @media (max-width: 480px) {
-  .site-header { padding: 14px 18px; }
-  .site-header-name { font-size: 14px; }
+  .site-header { padding: 12px 18px; }
+  .site-header-logo { height: 48px; }
 }
 
 .page {
@@ -324,7 +317,7 @@ select {
 .btn-primary {
   background: var(--gold-500);
   color: var(--white);
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
+  box-shadow: 0 8px 18px rgba(58, 92, 122, 0.28);
 }
 
 .btn-primary:hover {
@@ -546,7 +539,7 @@ select {
   font-weight: 700;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.32);
+  box-shadow: 0 10px 24px rgba(58, 92, 122, 0.32);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -931,14 +924,14 @@ select {
   border-radius: 50%;
   background: var(--gold-500);
   border: 3px solid var(--white);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.32);
+  box-shadow: 0 2px 8px rgba(58, 92, 122, 0.32);
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .slider::-webkit-slider-thumb:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.42);
+  box-shadow: 0 4px 12px rgba(58, 92, 122, 0.42);
 }
 
 .slider::-webkit-slider-thumb:active {
@@ -951,7 +944,7 @@ select {
   border-radius: 50%;
   background: var(--gold-500);
   border: 3px solid var(--white);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.32);
+  box-shadow: 0 2px 8px rgba(58, 92, 122, 0.32);
   cursor: pointer;
 }
 
@@ -1026,7 +1019,7 @@ select {
 }
 
 @keyframes valueFlash {
-  0%   { background: rgba(147, 180, 247, 0.55); border-radius: 6px; padding: 2px 6px; margin: -2px -6px; }
+  0%   { background: rgba(135, 163, 189, 0.55); border-radius: 6px; padding: 2px 6px; margin: -2px -6px; }
   100% { background: transparent; padding: 0; margin: 0; }
 }
 

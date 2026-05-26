@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Retirement Readiness Quiz · Example Quiz Funnel",
+  title: "Retirement Readiness Quiz · Strategy Retirement & Insurance",
   description: "Find out how close you are to retirement in 12 quick questions.",
 };
 
@@ -18,8 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.variable}>
       <body>
         <header className="site-header">
-          <span className="site-header-mark" aria-hidden="true" />
-          <span className="site-header-name">Example Quiz Funnel</span>
+          <img
+            src="/sri-logo.png"
+            alt="Strategy Retirement & Insurance"
+            className="site-header-logo"
+          />
         </header>
         {children}
         <footer className="site-footer">
