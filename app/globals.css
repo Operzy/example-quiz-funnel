@@ -28,10 +28,10 @@
   --line: #e5e7eb;
   --white: #ffffff;
   --bg: #ffffff;
-  /* Header bar background — light gray so logos that contain white don't
-     blend into the page. Per-business CSS can override this with a darker
-     or warmer tint when the logo's own palette calls for it. */
-  --header-bg: #e5e7eb;
+  /* Header bar background — matched to the SRI logo's slate-blue so the
+     baked-in logo background blends seamlessly into the header bar. */
+  --header-bg: var(--gold-500);
+  --header-border: rgba(255, 255, 255, 0.08);
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   --shadow-soft: 0 4px 14px rgba(15, 23, 42, 0.05);
   --radius: 18px;
@@ -78,14 +78,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--header-border);
 }
 
 .site-header-logo {
   height: 64px;
   width: auto;
   display: block;
-  border-radius: 8px;
 }
 
 @media (max-width: 480px) {
