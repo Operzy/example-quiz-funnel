@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Retirement Readiness Quiz · Strategy Retirement & Insurance",
+  title: "Retirement Readiness Quiz · South Park Capital",
   description: "Find out how close you are to retirement in 12 quick questions.",
 };
 
@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
       <body>
         <header className="site-header">
           <img
-            src="/sri-logo.png"
-            alt="Strategy Retirement & Insurance"
+            src="/southpark-logo.png"
+            alt="South Park Capital"
             className="site-header-logo"
           />
         </header>

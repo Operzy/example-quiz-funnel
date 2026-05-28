@@ -1,26 +1,30 @@
 :root {
-  /* White + Blue palette
-     Blue (--gold-*) is the primary accent — buttons, fills, highlights.
-     Charcoal (--navy-*) is supporting — text, secondary accents.
-     Variable names preserved (--gold-*) so existing class names continue to map cleanly. */
-  --navy-50: #f6f7f9;
-  --navy-100: #e8eaed;
-  --navy-200: #cfd3d9;
+  /* DEFAULT PLACEHOLDER PALETTE.
+     Every value below is overwritten by the per-business :root override the
+     generator appends at the bottom of this file. The defaults here exist
+     only so the template renders coherently on its own (e.g. previewed
+     locally without going through services/funnel.js).
+
+     --gold-* = primary brand accent (buttons, fills, highlights).
+     --navy-* = supporting / text. */
+  --navy-50:  #f5f6f8;
+  --navy-100: #e6e9ee;
+  --navy-200: #c6cdd6;
   --navy-400: #6b7280;
   --navy-500: #4b5563;
   --navy-600: #374151;
-  --navy-700: #1f2937;  /* deep charcoal text */
+  --navy-700: #1f2937;
   --navy-900: #111827;
 
-  /* SRI slate-blue accent (sampled from the logo background) */
-  --gold-50:  #eef3f8;
-  --gold-100: #d8e3ed;
-  --gold-200: #b3c5d6;
-  --gold-300: #87a3bd;
-  --gold-400: #5e809e;
-  --gold-500: #3a5c7a;  /* primary slate blue, matches logo background */
-  --gold-600: #2c4762;
-  --gold-700: #1f3346;
+  /* South Park Capital forest green (sampled from the logo wordmark). */
+  --gold-50:  #eef5ef;
+  --gold-100: #d4e6d7;
+  --gold-200: #aacbb1;
+  --gold-300: #7aae85;
+  --gold-400: #4e8d5e;
+  --gold-500: #2d5d3a;
+  --gold-600: #234a2e;
+  --gold-700: #1a3722;
 
   --ink: #111827;
   --ink-soft: #374151;
@@ -28,10 +32,10 @@
   --line: #e5e7eb;
   --white: #ffffff;
   --bg: #ffffff;
-  /* Header bar background — matched to the SRI logo's slate-blue so the
-     baked-in logo background blends seamlessly into the header bar. */
-  --header-bg: var(--gold-500);
-  --header-border: rgba(255, 255, 255, 0.08);
+  /* Header bar background — soft green tint so the white-backed SP logo
+     reads as part of the brand band rather than floating on plain gray. */
+  --header-bg: #eef5ef;
+  --header-border: var(--line);
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   --shadow-soft: 0 4px 14px rgba(15, 23, 42, 0.05);
   --radius: 18px;
@@ -82,14 +86,14 @@ select {
 }
 
 .site-header-logo {
-  height: 64px;
+  height: 96px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 480px) {
   .site-header { padding: 12px 18px; }
-  .site-header-logo { height: 48px; }
+  .site-header-logo { height: 72px; }
 }
 
 .page {
@@ -316,7 +320,7 @@ select {
 .btn-primary {
   background: var(--gold-500);
   color: var(--white);
-  box-shadow: 0 8px 18px rgba(58, 92, 122, 0.28);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
 }
 
 .btn-primary:hover {
@@ -538,7 +542,7 @@ select {
   font-weight: 700;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(58, 92, 122, 0.32);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -923,14 +927,14 @@ select {
   border-radius: 50%;
   background: var(--gold-500);
   border: 3px solid var(--white);
-  box-shadow: 0 2px 8px rgba(58, 92, 122, 0.32);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .slider::-webkit-slider-thumb:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(58, 92, 122, 0.42);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.42);
 }
 
 .slider::-webkit-slider-thumb:active {
@@ -943,7 +947,7 @@ select {
   border-radius: 50%;
   background: var(--gold-500);
   border: 3px solid var(--white);
-  box-shadow: 0 2px 8px rgba(58, 92, 122, 0.32);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
   cursor: pointer;
 }
 
@@ -1018,7 +1022,7 @@ select {
 }
 
 @keyframes valueFlash {
-  0%   { background: rgba(135, 163, 189, 0.55); border-radius: 6px; padding: 2px 6px; margin: -2px -6px; }
+  0%   { background: rgba(153, 153, 153, 0.45); border-radius: 6px; padding: 2px 6px; margin: -2px -6px; }
   100% { background: transparent; padding: 0; margin: 0; }
 }
 
